@@ -1,0 +1,13 @@
+# C Executables
+*.exe
+*.out
+*.txt
+
+# MacOS
+.DS_Store
+
+# VisualStudioCode
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
