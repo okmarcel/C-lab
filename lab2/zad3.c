@@ -4,8 +4,8 @@
 
 int main()
 {
-    time_t time;
-    srand(time);
+    time_t czas;
+    srand((unsigned int)time(&czas));
 
     char a = (char)('A' + rand()%26);
 

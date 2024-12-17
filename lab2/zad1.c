@@ -4,8 +4,8 @@
 
 int main()
 {
-    time_t time;
-    srand(time);
+    time_t czas;
+    srand((unsigned int)time(&czas));
     int n = (rand()%9)+1;
 
     for (int i = n; i >= 0; i--)
