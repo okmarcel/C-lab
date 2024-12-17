@@ -1,11 +1,5 @@
-# C Executables
-*.exe
-*.out
-*.txt
-*
-!*.c
-!Makefile
-
+# Compiled files
+zad[0-9]
 
 # MacOS
 .DS_Store
