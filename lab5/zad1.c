@@ -6,13 +6,12 @@ int min(float *first, int n)
 {
     int it = 0;
     float* minPtr = first;
-    first++;
 
-    for (int i = 0; i < n-1; i++)
+    for (int i = 0; i < n; i++)
     {
         if (*first < *minPtr)
         {
-            it = i+1;
+            it = i;
             minPtr = first;
         }
         first++;
@@ -48,12 +47,12 @@ int main()
     }
 
     printf("minimalny we wszystkich elementach = %0.4f adres elementu: %p, maksymalny we wszystkich elementach %0.4f adres elementu: %p\n",
-            tab[min(&tab[0], 100)], &tab[min(&tab[0], 100)], *max(&tab[0], &tab[99]), max(&tab[0], &tab[99]));
+            tab[min(&tab[0], 99)], &tab[min(&tab[0], 99)], *max(&tab[0], &tab[99]), max(&tab[0], &tab[99]));
     printf("-------------------------------------------------------------\n");
 
     for (int i = 0; i < 10; i++)
     {
-        float* minPtr = &tab[min(&tab[i], 10)];
+        float* minPtr = &tab[i*10+min(&tab[i*10], 10)];
         float* maxPtr = max(&tab[i*10], &tab[i*10+9]);
 
         printf("elementy od %2d do %2d min = %0.4f adres %p max = %0.4f adres %p\n",

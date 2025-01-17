@@ -38,14 +38,7 @@ int main()
 
     if (minPtr != NULL)
     {
-        tabPtr = tab;
-        int indeks = 0;
-
-        while (tabPtr != minPtr)
-        {
-            tabPtr++;
-            indeks++;
-        }
+        int indeks = minPtr - tab;
         
         printf("\nnajmniejszy element dodatni: %f, adres: %p, indeks w tablicy: %d", *minPtr, minPtr, indeks);
     }
